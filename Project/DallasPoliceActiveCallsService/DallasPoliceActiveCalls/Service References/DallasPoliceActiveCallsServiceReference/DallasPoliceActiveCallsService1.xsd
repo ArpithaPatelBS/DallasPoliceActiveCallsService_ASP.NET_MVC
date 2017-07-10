@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:58333/DallasPoliceActiveCallsService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DallasPoliceActiveCallsService" />
+  <xs:element name="GetData">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DallasPoliceActiveCallsService" minOccurs="0" name="GetDataResult" nillable="true" type="q1:ArrayOfActiveCalls" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DallasPoliceActiveCallsService" minOccurs="0" name="activeCalls" nillable="true" type="q2:ActiveCalls" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DallasPoliceActiveCallsService" minOccurs="0" name="activeCalls" nillable="true" type="q3:ActiveCalls" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IncidentNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteDataResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IncidentNumber" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DallasPoliceActiveCallsService" minOccurs="0" name="GetDetailsResult" nillable="true" type="q4:ActiveCalls" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriorityGraphValues">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPriorityGraphValuesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DallasPoliceActiveCallsService" minOccurs="0" name="GetPriorityGraphValuesResult" nillable="true" type="q5:ArrayOfPriorityGraph" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

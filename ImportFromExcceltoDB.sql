@@ -1,0 +1,2 @@
+SELECT * INTO XLImport5 FROM OPENROWSET('Microsoft.Jet.OLEDB.4.0',
+'Excel 8.0;Database=C:\Users\Patel\Desktop\PredictiveAI\Dallas_Police_Active_Calls.xls', 'SELECT * FROM [Dallas_Police_Active_Calls$]')

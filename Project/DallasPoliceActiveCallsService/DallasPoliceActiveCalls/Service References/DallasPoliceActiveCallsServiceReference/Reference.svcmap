@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="c16f4470-3265-478b-9d61-fd81d7432bfe" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58333/DallasPoliceActiveCallsService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DallasPoliceActiveCallsService.xsd" MetadataType="Schema" ID="a827a9d8-e367-4e9d-b50b-b8b7116b2592" SourceId="1" SourceUrl="http://localhost:58333/DallasPoliceActiveCallsService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DallasPoliceActiveCallsService.wsdl" MetadataType="Wsdl" ID="d173eaec-e6b1-4707-8532-dbaf8616b491" SourceId="1" SourceUrl="http://localhost:58333/DallasPoliceActiveCallsService.svc?wsdl" />
+    <MetadataFile FileName="DallasPoliceActiveCallsService1.xsd" MetadataType="Schema" ID="e58750f7-b258-4be8-b539-2015e178a890" SourceId="1" SourceUrl="http://localhost:58333/DallasPoliceActiveCallsService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DallasPoliceActiveCallsService2.xsd" MetadataType="Schema" ID="5515867f-0fe4-4444-b647-5be54bf1a490" SourceId="1" SourceUrl="http://localhost:58333/DallasPoliceActiveCallsService.svc?xsd=xsd1" />
+    <MetadataFile FileName="DallasPoliceActiveCallsService.disco" MetadataType="Disco" ID="43fe7423-8aca-455b-ab9e-ff1ef17987f3" SourceId="1" SourceUrl="http://localhost:58333/DallasPoliceActiveCallsService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

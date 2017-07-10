@@ -1,0 +1,97 @@
+﻿@model IEnumerable<DallasPoliceActiveCalls.Models.PriorityGraphModel>
+
+<h4>Graph of Priority V/S Count of ResultSet in each Priority</h4>
+<br/>
+<br/>
+
+<script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+<svg id="chart"></svg>
+
+<script type="text/jscript">
+    var priorities  = @(Html.Raw(Newtonsoft.Json.JsonConvert.SerializeObject(Model)));
+
+    makeChart(priorities);
+
+    function makeChart(priorities) {
+
+        // Format the data to work with D3
+        var dataArray = [],
+            dataKeyVal = [];
+
+        for (var i =0; i< priorities.length; i++) {
+            dataArray.push(priorities[i].Priority);
+        }
+
+        for (var i =0; i< priorities.length; i++) {
+            dataKeyVal.push({ "Priority": priorities[i].Priority, "Count": priorities[i].Count });
+        }
+
+        // Render charts
+        var margin = {top: 10, right: 20, bottom: 20, left: 60},
+    width = 500,
+    height = 400;
+
+        var x = d3.scale.ordinal()
+            .domain(dataKeyVal.map(function(d) { return d.Priority; } ))
+            .rangeRoundBands([0, width], .1);
+
+        var y = d3.scale.linear()
+            .domain([0, d3.max(dataKeyVal, function(d) { return d.Count })])
+            .range([height, 0]);
+
+        var xAxis = d3.svg.axis()
+            .scale(x)
+            .orient("bottom");
+
+        var yAxis = d3.svg.axis()
+            .scale(y)
+            .orient("left");
+
+        var chart = d3.select("#chart")
+            .attr("width", width + margin.left + margin.right)
+            .attr("height", height + margin.top + margin.bottom)
+          .append("g")
+            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+        chart.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height + ")")
+            .call(xAxis);
+
+        chart.append("g")
+            .attr("class", "y axis")
+            .call(yAxis)
+
+        d3.select(".vertical-bar-chart").append("text")
+            .style("text-anchor", "end")
+            .attr("transform", "translate(15," + height / 2 + "), rotate(-90)")
+            .text("Bytes");
+
+        var bar = chart.selectAll(".bar")
+            .data(dataKeyVal)
+          .enter().append("g")
+            .attr("class", "bar")
+            .attr("transform", function(d) { return "translate(" + x(d.Priority) + ",0)"; })
+
+        bar.append("rect")
+            .attr("class", "bar")
+            .attr("y", function(d) { return y(d.Count); })
+            .attr("height", function(d) { return height - y(d.Count); })
+            .attr("width", x.rangeBand())
+
+        bar.append("text")
+            .attr("x", x.rangeBand() / 2)
+            .attr("y", function(d) { return y(d.Count) + 3; })
+            .attr("dy", ".75em")
+            .text(function(d) { return d.Count; });
+
+
+
+
+    }
+
+
+
+
+</script>    

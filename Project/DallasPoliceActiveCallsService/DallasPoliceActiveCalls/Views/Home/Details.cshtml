@@ -1,0 +1,100 @@
+﻿@model DallasPoliceActiveCalls.Models.Details
+
+<div>
+    <h4>Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.IncidentNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncidentNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Division)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Division)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NatureOfCalls)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NatureOfCalls)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Block)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Block)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beat)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beat)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReportingArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReportingArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.IncidentNumber }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

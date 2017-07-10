@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</head>
+<body>
+
+    <body>
+        <div id="page-wrap">
+            <h1 class="header">Dallas Police Active Calls </h1>
+
+
+
+                    <div id="contact-info" class="container"></div>
+                    @RenderBody()
+                </div>
+    
+
+
+   
+
+    
+</body>
+</html>
